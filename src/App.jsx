@@ -1,16 +1,22 @@
 import './App.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min';
-import { Navbar } from './components/navbar/Navbar';
-import { Footer } from './components/footer/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { RegistroProfesional } from './pages/RegistroProfesional';
+import { NotFoundPage } from './pages/NotFoundPage';
 
 
 function App() {
 
   return (
     <>
-      <Navbar />
-      <Footer />
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={ <Home /> } />
+      <Route path="/profesional/registro" element={ <RegistroProfesional /> } />
+      <Route path="*" element={ <NotFoundPage /> } />
+    </Routes>
+
+    </BrowserRouter>
     </>
   )
 }
