@@ -4,13 +4,10 @@ import "./registroProfesional.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
+
+
 export const RegistroProfesional = () => {
-  const {
-    register,
-    formState: { errors },
-    handleSubmit,
-    reset,
-  } = useForm({
+  const { register, formState: { errors }, handleSubmit, reset} = useForm({
     defaultValues: {
       nombre: "",
       apellido: "",
