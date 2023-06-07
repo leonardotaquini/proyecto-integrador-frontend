@@ -5,45 +5,28 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
   return (
     <>
-      <nav className="navbar d-flex  justify-content-between nav navbar-expand-lg">
-        <Link
-          to="/"
-          className="mx-2 fw-bold h4 text-dark title text-decoration-none">
-          Arreglos Ya
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div
-          className="items collapse navbar-collapse navbar-collapse d-flex flex-column"
-          id="navbarSupportedContent">
-          <Link
-            to="/"
-            className="text-decoration-none px-3 text-center btn text-dark nav-item">
-            Inicio
-          </Link>
-          <Link
-            to="/profesionales"
-            className="text-decoration-none px-3 text-center btn text-dark nav-item">
-            Profesionales
-          </Link>
-          <Link
-            to="/acerca"
-            className="text-decoration-none px-3 text-center btn text-dark nav-item">
-            Sobre Nosotros
-          </Link>
-          <Link
-            to="/profesional/registro"
-            className="text-decoration-none px-3 text-center btn text-dark nav-item">
-            Registrarse
-          </Link>
+      <nav className="navbar navbar-expand-lg bg-body-warning nav">
+        <div className="container-fluid">
+          <Link to='/' className="navbar-brand title">Arreglos Ya</Link>
+          <button className="navbar-toggler btn-hamburguesa" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className="nav-item text-center">
+                <Link to='/' className="nav-link items text-dark" aria-current="page">Inicio</Link>
+              </li>
+              <li className="nav-item text-center">
+                <Link to='/profesionales' className="nav-link items text-dark">Profesionales</Link>
+              </li>
+              <li className="nav-item text-center dropdown">
+              <Link to='/nosotros' className="nav-link items text-dark">Nosotros</Link>
+              </li>
+              <li className="nav-item text-center">
+                <Link to='/profesional/registro' className="nav-link items text-dark">Registrarse</Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
     </>

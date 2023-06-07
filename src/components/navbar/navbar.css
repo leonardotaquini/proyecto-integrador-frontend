@@ -1,18 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap');
 .nav{
-    height: 10vh!important;
-    background-color:#e7e40d7e; ;
+    
+    background-color:#e7e40d7e; 
 }
 .title{
     font-family: 'Akshar', sans-serif;
-    height: 100%;
     
+}
+.btn-hamburguesa{
+    border: none!important;
+}
+.btn-hamburguesa:focus{
+    border: none!important;
+    text-decoration: none!important;
+    box-shadow: none!important;
 }
 .items{
     font-family: 'Roboto', sans-serif;
-    height: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+}
+.items:hover{
+    color: rgb(19, 18, 18);
+    font-weight: bold;
 }

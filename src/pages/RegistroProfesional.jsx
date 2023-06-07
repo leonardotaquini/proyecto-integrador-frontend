@@ -38,10 +38,7 @@ export const RegistroProfesional = () => {
       <div className="formulario-contenedor justify-content-center align-items-center">
           <div className="col-11 col-sm-8 col-lg-6 formulario d-flex flex-column justify-content-center align-items-center">
             <h3 className="text-center m-3">Registro Profesional</h3>
-            <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="form col-12 col-sm-10 col-md-8 col-lg-8"
-            >
+            <form onSubmit={handleSubmit(onSubmit)} className="form col-12 col-sm-10 col-md-8 col-lg-8">
               <div className="">
                 <label htmlFor="nombre">Nombre</label>
                 <input
