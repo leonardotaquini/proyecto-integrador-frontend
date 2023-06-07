@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap");
+
+.titulo {
+  font-family: "Akshar", sans-serif;
+}
+.main {
+  height: 90vh;
+}
+.articulo {
+  height: 50%;
+  width: 100%;
+}
+.barraNav {
+  width: 50%;
+}
