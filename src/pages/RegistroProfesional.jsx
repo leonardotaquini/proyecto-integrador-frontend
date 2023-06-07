@@ -14,6 +14,7 @@ export const RegistroProfesional = () => {
     defaultValues: {
       nombre: "",
       apellido: "",
+      fecha_nacimiento:"",
       email: "",
       telefono: "",
       profesion: "",
@@ -34,10 +35,8 @@ export const RegistroProfesional = () => {
     <>
       <Navbar />
 
-      <div className="formulario-contenedor">
-        <div className="d-flex h-100">
-          <div className="col-6 imagen shadow h-100"></div>
-          <div className="col-12 col-sm-6 col-lg-6 formulario h-100 d-flex flex-column justify-content-center align-items-center">
+      <div className="formulario-contenedor justify-content-center align-items-center">
+          <div className="col-11 col-sm-8 col-lg-6 formulario d-flex flex-column justify-content-center align-items-center">
             <h3 className="text-center m-3">Registro Profesional</h3>
             <form
               onSubmit={handleSubmit(onSubmit)}
@@ -70,12 +69,12 @@ export const RegistroProfesional = () => {
                 )}
               </div>
               <div className="">
-                <label htmlFor="nacimiento">Fecha de Nacimiento</label>
+                <label htmlFor="fecha_nacimiento">Fecha de Nacimiento</label>
                 <input
                   className="form-control"
                   type="date"
-                  id="nacimiento"
-                  {...register("nacimiento", { required: true })}
+                  id="fecha_nacimiento"
+                  {...register("fecha_nacimiento", { required: true })}
                 />
                 {errors.nacimiento?.type === "required" && (
                   <p className="alert alert-danger">
@@ -126,7 +125,6 @@ export const RegistroProfesional = () => {
               <button className="btn btn-warning my-2 w-100">Registrar</button>
             </form>
           </div>
-        </div>
       </div>
     </>
   );
