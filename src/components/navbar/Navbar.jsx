@@ -20,7 +20,7 @@ export const Navbar = () => {
                 <Link to='/profesionales' className="nav-link items text-dark">Profesionales</Link>
               </li>
               <li className="nav-item text-center dropdown">
-              <Link to='/nosotros' className="nav-link items text-dark">Nosotros</Link>
+              <Link to='/login' className="nav-link items text-dark ">Iniciar sesión</Link>
               </li>
               <li className="nav-item text-center">
                 <Link to='/profesional/registro' className="nav-link items text-dark">Registrarse</Link>
