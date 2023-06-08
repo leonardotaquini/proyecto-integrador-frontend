@@ -6,10 +6,16 @@
 .main {
   height: 90vh;
 }
-.articulo {
-  height: 50%;
+.articulo-1 {
   width: 100%;
 }
 .barraNav {
-  width: 50%;
+  border-radius: 0 !important;
+}
+.catalago {
+  height: 50%;
+  width: 100%;
+}
+.boton {
+  border-radius: 0 !important;
 }
