@@ -1,12 +1,16 @@
 import React from "react";
-import { Navbar } from "../components/navbar/Navbar";
+import { Navbar } from "../../components/navbar/Navbar";
 import "./registroProfesional.css";
 import { useForm } from "react-hook-form";
-import axios from "axios";
-
+import { registrarProfesional } from "../../helpers/profesionalAxios";
+import { useContext } from "react";
+import { ProfesionalContext } from "../../context/profesional/profesionalContext";
 
 
 export const RegistroProfesional = () => {
+
+  const { actualizar } = useContext(ProfesionalContext);
+
   const { register, formState: { errors }, handleSubmit, reset} = useForm({
     defaultValues: {
       nombre: "",
@@ -19,13 +23,10 @@ export const RegistroProfesional = () => {
   });
 
   const onSubmit = async (profesional) => {
-    try {
-        const res = await axios.post("http://localhost:3000/api/profesional/registrar", profesional);
-        console.log(res); 
-        reset();
-    } catch (error) {
-        console.log(error);
-    }
+    actualizar(true);
+    await registrarProfesional(profesional);
+    actualizar(false);
+    reset();
   };
 
   return (
