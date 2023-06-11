@@ -15,7 +15,7 @@ export const ProfesionalesList = () => {
                 profesionales.length === 0 && <div className='alert alert-danger w-100 text-center'>No hay profesionales</div>
             }
             {
-                profesionales.map((profesional, i) => <div key={i}>{profesional.nombre} {profesional.profesion}</div> )
+                profesionales.map((profesional, i) => <div key={i}>{profesional.nombre} {profesional.apellido} {profesional.profesion}</div> )
             }
         </div>
     </>

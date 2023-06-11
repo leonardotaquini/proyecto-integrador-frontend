@@ -1,12 +1,12 @@
 import { useEffect, useReducer, useState } from "react"
 import { ProfesionalReducer } from "./profesionalReducer"
-import { useNavigate } from "react-router-dom";
 import { ProfesionalContext } from "./profesionalContext";
-import { listarProfesionales, registrarProfesional , obtenerProfesional, actualizarProfesional, eliminarProfesional} from "../../helpers/profesionalAxios"
+import { registrarProfesional, listarProfesionales } from "../../helpers/profesionalAxios"
 import { TYPES } from "../types";
+
 export const ProfesionalState = ({ children }) => {
 
-    const navigate = useNavigate();
+    
 
     const initialState = {
       profesionales: [],
@@ -15,13 +15,13 @@ export const ProfesionalState = ({ children }) => {
     const [state, dispatch] = useReducer(ProfesionalReducer, initialState);
     const [actualizarLista, setactualizarLista] = useState(false);
 
+    //Obtengo los profesionales al cargar la pagina por primera vez
     useEffect(() => {
         obtenerProfesionales();
-
     }, [actualizarLista]);
     
 
-
+    
     const obtenerProfesionales = async () => {
         const res = await listarProfesionales();
         dispatch({
@@ -34,10 +34,15 @@ export const ProfesionalState = ({ children }) => {
        setactualizarLista(valor);
     }
 
+    const guardarProfesional = async(profesional) =>{
+        const res = await registrarProfesional(profesional);
+        actualizar(!actualizarLista)
+    }
+
     return (
         <ProfesionalContext.Provider value={{
             profesionales: state.profesionales,
-            actualizar,     
+            guardarProfesional,    
         }}>
             {children}
         </ProfesionalContext.Provider>
