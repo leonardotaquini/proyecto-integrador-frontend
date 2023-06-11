@@ -1,9 +1,0 @@
-.formulario-contenedor{
-    height: 90vh;
-}
-@media (screen-width: 768px){
-    .imagen{
-        display: none;
-    }
-    
-}

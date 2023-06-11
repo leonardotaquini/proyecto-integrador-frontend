@@ -1,0 +1,24 @@
+.formulario-contenedor{
+    height: 90vh;
+    display: flex;
+}
+
+.form{
+    background-color: rgb(255, 255, 255);
+}
+
+.formulario{
+    height:100%;
+    overflow-y: scroll;
+
+}
+.formulario::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 768px){
+    .imagen{
+        display: none;
+    }
+    
+}
