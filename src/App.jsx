@@ -5,6 +5,7 @@ import { RegistroProfesional } from "./pages/registroProfesional/RegistroProfesi
 import { NotFoundPage } from "./pages/NotFoundPage";
 import { ProfesionalState } from "./context/profesional/ProfesionalState";
 import { ProfesionalesList } from "./pages/listaProfesionales/ProfesionalesList";
+import { Login } from './pages/Login';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/profesional/registro" element={ <RegistroProfesional /> } />
             <Route path="/profesionales" element={<ProfesionalesList />} />
-            <Route path="*" element={<NotFoundPage />} />
+            <Route path='/login' element={ <Login />} />
+      <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </ProfesionalState>
       </BrowserRouter>
