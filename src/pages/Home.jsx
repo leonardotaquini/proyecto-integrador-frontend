@@ -3,11 +3,12 @@ import { Navbar } from "../components/navbar/Navbar";
 import "./home.css";
 import { Search } from "../components/searchbar/Search";
 import { Link } from "react-router-dom";
+import { Slider } from "../components/slider/Slider";
 
 export const Home = () => {
   return (
     <>
-      <div className="vh-100 d-flex flex-column justify-content-column">
+      <div className="vh-100 d-flex flex-column ">
         <header>
           <nav>
             <Navbar />
@@ -24,19 +25,39 @@ export const Home = () => {
                 <Search />
               </div>
             </section>
-            <section className="d-flex justify-content-around aling-items-center m-auto col-10 col-sm-8 col-lg-5 border border border-dark">
-              <Link to="/" className="text-decoration-none text-dark">
-                Electricista
-              </Link>
-              <Link to="/" className="text-decoration-none text-dark">
-                Plomero
-              </Link>
-              <Link to="/" className="text-decoration-none text-dark">
-                Carpintero
-              </Link>
-              <Link to="/" className="text-decoration-none text-dark">
-                Gasista
-              </Link>
+            <section className="etiquetas-slider d-flex">
+              <div className="etiquetas d-flex flex-column justify-content-center aling-items-center m-auto col-10 col-sm-8 col-lg-5 border border border-dark ">
+                <div className="titulo-etiquetas m-auto ">
+                  Lo mas buscado...
+                </div>
+
+                <div className="border border-dark m-auto ">
+                  <Link to="/" className="text-decoration-none text-dark">
+                    <h5>Electricista</h5>
+                  </Link>
+                </div>
+
+                <div className="border border-dark m-auto">
+                  <Link to="/" className="text-decoration-none text-dark">
+                    <h5>Plomero</h5>
+                  </Link>
+                </div>
+
+                <div className="border border-dark m-auto">
+                  <Link to="/" className="text-decoration-none text-dark">
+                    <h5>Carpintero </h5>
+                  </Link>
+                </div>
+
+                <div className="border border-dark m-auto">
+                  <Link to="/" className="text-decoration-none text-dark">
+                    <h5>Gasista</h5>
+                  </Link>
+                </div>
+              </div>
+              <div className="slider d-flex  justify-content-start aling-items-start m-auto col-10 col-sm-8 col-lg-5 border border border-dark  ">
+                <slider />
+              </div>
             </section>
           </article>
           <article className="articulo-2 d-flex justify-content-between aling-items-center flex-column ">

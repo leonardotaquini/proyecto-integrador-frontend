@@ -12,10 +12,19 @@
 .barraNav {
   border-radius: 0 !important;
 }
-.catalago {
+
+.boton {
+  border-radius: 0 !important;
+}
+.etiquetas-slider {
   height: 50%;
   width: 100%;
 }
-.boton {
-  border-radius: 0 !important;
+.etiquetas {
+  width: 100%;
+  height: 80%;
+}
+.slider {
+  width: 100%;
+  height: 80%;
 }
